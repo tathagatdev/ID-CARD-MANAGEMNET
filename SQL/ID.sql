@@ -1,24 +1,9 @@
--- phpMyAdmin SQL Dump
--- version 4.4.14
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: Jul 17, 2017 at 06:15 PM
--- Server version: 5.6.26
--- PHP Version: 5.5.28
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `library`
---
 
 -- --------------------------------------------------------
 
@@ -67,25 +52,6 @@ INSERT INTO `tblstudents` (`id`, `StudentId`, `FullName`, `EmailId`, `MobileNumb
 (8, 'B200012CS', 'test', 'test@gmail.com', '2359874527', 'f925916e2754e5e03f75dd58a5733251', 1, '2017-07-11 15:58:28', '2017-07-15 13:42:44'),
 (9, 'B200013CS', 'Amit', 'amit@gmail.com', '8585856224', 'f925916e2754e5e03f75dd58a5733251', 1, '2017-07-15 13:40:30', NULL),
 (10, 'B200014CS', 'Sarita Pandey', 'sarita@gmail.com', '4672423754', 'f925916e2754e5e03f75dd58a5733251', 1, '2017-07-15 18:00:59', NULL);
-CREATE TABLE IF NOT EXISTS `tblissuediddetails` (
-  `id` int(11) NOT NULL,
-  `StudentID` varchar(150) DEFAULT NULL,
-  `IssuesDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tblissuedbookdetails`
---
-
-INSERT INTO `tblissuediddetails` (`id`, `Roll`, `IssuesDate`) VALUES
-(1, 'B200010CS', '2017-07-15 06:09:47'),
-(2, 'B200011CS', '2017-07-15 06:12:27'),
-(3, 'B200012CS', '2017-07-15 06:13:40'),
-(4, 'B200013CS', '2017-07-15 06:23:23'),
-(5, 'B200014CS', '2017-07-15 10:59:26'),
-(6, 'B200015CS', '2017-07-15 18:02:55');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `tblstudents`
@@ -125,16 +91,12 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblauthors`
---
 
 
 ALTER TABLE `studentLogin`
   
   ADD PRIMARY KEY `StudentId` (`StudentId`);
 
-ALTER TABLE `tblissuediddetails`
-  ADD PRIMARY KEY (`id`);
 
 
 ALTER TABLE `tblstudents`
@@ -151,11 +113,8 @@ ALTER TABLE `tblstudents`
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `tblauthors`
 --
 
-ALTER TABLE `tblissuediddetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tblstudents`
 --
