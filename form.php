@@ -36,9 +36,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 
 }
 
-echo '<form method="POST" action="dashboard.php">
-<input type="submit"/>
-</form>';
+
 
 }
 
